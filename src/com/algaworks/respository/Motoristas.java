@@ -14,9 +14,10 @@ public class Motoristas {
 
 	public Motoristas() {
 		Seguro seguro = new Seguro("Parcial - não cobre roubo", new BigDecimal("5000"));
+		
 		Caminhao caminhao = new Caminhao("Mercedres Atron", seguro);
+		
 		Motorista motoristaJoao = new Motorista("Joao", 40, caminhao);
-
 		Motorista motoristaJose = new Motorista("José", 25, null);
 
 		motoristas.put("João", motoristaJoao);
