@@ -8,7 +8,6 @@ public class Seguro {
 	private BigDecimal valorFranquia;
 
 	public Seguro(String cobertura, BigDecimal valorFranquia) {
-		super();
 		this.cobertura = cobertura;
 		this.valorFranquia = valorFranquia;
 	}
