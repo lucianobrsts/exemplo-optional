@@ -1,12 +1,14 @@
 package com.algaworks.model;
 
+import java.util.Optional;
+
 public class Motorista {
 
 	private String nome;
 	private Integer idade;
-	private Caminhao caminhao;
+	private Optional<Caminhao> caminhao;
 
-	public Motorista(String nome, Integer idade, Caminhao caminhao) {
+	public Motorista(String nome, Integer idade, Optional<Caminhao> caminhao) {
 		super();
 		this.nome = nome;
 		this.idade = idade;
@@ -29,11 +31,11 @@ public class Motorista {
 		this.idade = idade;
 	}
 
-	public Caminhao getCaminhao() {
+	public Optional<Caminhao> getCaminhao() {
 		return caminhao;
 	}
 
-	public void setCaminhao(Caminhao caminhao) {
+	public void setCaminhao(Optional<Caminhao> caminhao) {
 		this.caminhao = caminhao;
 	}
 
