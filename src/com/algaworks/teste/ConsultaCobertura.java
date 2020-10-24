@@ -9,8 +9,9 @@ public class ConsultaCobertura {
 
 	public static void main(String[] args) {
 		Motoristas motoristas = new Motoristas();
-		//Motorista motorista = motoristas.porNome("João");
+		// Motorista motorista = motoristas.porNome("João");
 
+		// Estrutura antes do Optional
 		// String cobertura = motorista.getCaminhao().getSeguro().getCobertura();
 //		String cobertura = "Sem cobertura";
 //		if (motorista != null) {
@@ -22,8 +23,15 @@ public class ConsultaCobertura {
 //				}
 //			}
 //		}
+		
+		String cobertura = motoristas.porNome("João")
+				.flatMap(Motorista::getCaminhao)
+				.flatMap(Caminhao::getSeguro)
+				.map(Seguro::getCobertura)
+				.orElse("Sem Cobertura");
 
-		//System.out.println("A cobertura é: " + cobertura);
+
+		System.out.println("A cobertura é: " + cobertura);
 
 	}
 
