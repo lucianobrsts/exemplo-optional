@@ -9,7 +9,7 @@ public class ConsultaCobertura {
 
 	public static void main(String[] args) {
 		Motoristas motoristas = new Motoristas();
-		Motorista motorista = motoristas.porNome("João");
+		//Motorista motorista = motoristas.porNome("João");
 
 		// String cobertura = motorista.getCaminhao().getSeguro().getCobertura();
 //		String cobertura = "Sem cobertura";
